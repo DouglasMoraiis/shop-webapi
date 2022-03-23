@@ -11,12 +11,13 @@ using Shop.Models;
 namespace Shop.Controllers
 {
 
-    [Route("products")]
+    [Route("v1/products")]
     public class ProductController : ControllerBase
     {
         [HttpGet]
         [Route("")]
         [AllowAnonymous]
+        [ResponseCache(VaryByHeader = "User-Agent", Location = ResponseCacheLocation.Any, Duration = 30)]
         public async Task<ActionResult<List<Product>>> Get([FromServices] DataContext context)
         {
             var products = await context.Products.Include(x => x.Category).AsNoTracking().ToListAsync();
@@ -26,6 +27,7 @@ namespace Shop.Controllers
         [HttpGet]
         [Route("{id:int}")]
         [AllowAnonymous]
+        [ResponseCache(VaryByHeader = "User-Agent", Location = ResponseCacheLocation.Any, Duration = 30)]
         public async Task<ActionResult<Product>> GetById(
             int id,
             [FromServices] DataContext context
@@ -43,6 +45,7 @@ namespace Shop.Controllers
         [HttpGet]
         [Route("categories/{id:int}")]
         [AllowAnonymous]
+        [ResponseCache(VaryByHeader = "User-Agent", Location = ResponseCacheLocation.Any, Duration = 30)]
         public async Task<ActionResult<Product>> GetByCategory(
             int id,
             [FromServices] DataContext context
