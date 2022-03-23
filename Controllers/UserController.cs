@@ -16,7 +16,7 @@ namespace Shop.Controllers
     {
         [HttpGet]
         [Route("")]
-        [Authorize(Roles = "manager")]
+        [AllowAnonymous]
         [ResponseCache(VaryByHeader = "User-Agent", Location = ResponseCacheLocation.Any, Duration = 30)]
         public async Task<ActionResult<List<User>>> Get(
             [FromServices] DataContext context
@@ -60,9 +60,15 @@ namespace Shop.Controllers
 
             try
             {
+                // Força o usuário a er sempre "funcionário"
+                model.Role = "employee";
+
                 context.Users.Add(model);
                 await context.SaveChangesAsync();
-                return model;
+
+                // Esconde a senha
+                model.Password = "";
+                return Ok(model);
             }
             catch (Exception)
             {
@@ -116,6 +122,8 @@ namespace Shop.Controllers
                 return NotFound(new { message = "Usuário ou senha inválidos" });
 
             var token = TokenService.GenerateToken(user);
+            // Esconde a senha
+            user.Password = "";
             return new
             {
                 user = user,

@@ -39,7 +39,8 @@ namespace Shop.Controllers
 
         [HttpPost]
         [Route("")]
-        [Authorize(Roles = "employee")]
+        //[Authorize(Roles = "employee")]
+        [AllowAnonymous]
         public async Task<ActionResult<List<Category>>> Post(
             [FromBody] Category model,
             [FromServices] DataContext context
