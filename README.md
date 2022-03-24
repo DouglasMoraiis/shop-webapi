@@ -31,7 +31,7 @@ As seguintes stacks foram usadas na construção do projeto:
 
 ## 👨‍💻 Autor
 
-Oi 👋, me chamo **Jander Douglas**. Se precisar de algo, pode entrar em contato! 👇
+Oi 👋, me chamo **Douglas**. Se precisar de algo, pode entrar em contato! 👇
 <p>
   <a href="https://web.whatsapp.com/send?phone=5588996776422" alt="WhatsApp" target="_blank" >
   <img src="https://img.shields.io/badge/WhatsApp-25d366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
