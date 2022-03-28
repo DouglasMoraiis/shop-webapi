@@ -11,14 +11,15 @@
 
 ## 📝 Descrição
 
-Aplicação criada .NET e executados por meio do Command Line Interface (CLI). As aplicações foram implementadas durante o curso [Fundamentos de Orientação a Objetos](https://balta.io/player/assistir/08317b43-0ff7-41e1-9d9e-736e5980f0d2) criada pelo professor [Balta.io](https://www.youtube.com/c/baltaio).
+A aplicação é uma Web API CRUD básica para cadastro de usuários, produtos e categorias. A sua implementação foi baseada no conceito de Data Driven, dentre outras coisas, uma base de Autenticação e Autorização com [JWT](https://jwt.io/introduction) e uma visualização da documentação com [Swagger](https://swagger.io/) foram desenvolvidas. O código foi produzido durante o curso **Criando APIs Data Driven com ASP.NET Core 3 e EF Core 3** orientado pelo professor [Balta.io](https://www.youtube.com/c/baltaio).
 
 ## 🎨 Layout
-
 <p align="center">
-    <img src=".github/images/Calculator.png" height="50%" width="50%" alt="Calculator" />
-    <img src=".github/images/EditorHTML.png" height="21.8%" width="21.8%" alt="EditorHTML" />
+    <img src=".github/images/image.png" height="45%" width="45%" alt="Calculator" />
+    <img src=".github/images/image2.png" height="39%" width="39%" alt="Calculator" />
 </p>
+
+Disponibilizado pela ferramenta de automatização da documentação **Swagger**.
 
 ## 🚀 Tecnologias
 
