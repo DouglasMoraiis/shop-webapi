@@ -77,14 +77,15 @@ namespace Shop.Controllers
                 await context.SaveChangesAsync();
                 return Ok(model);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return BadRequest(new { message = "Não foi possível criar o product" });
+                return BadRequest(new { message = "Não foi possível criar o produto", error = ex.Message });
             }
         }
 
         [HttpPut]
         [Route("{id:int}")]
+        [Authorize(Roles = "employee")]
         public async Task<ActionResult<List<Product>>> Put(
             int id,
             [FromBody] Product model,

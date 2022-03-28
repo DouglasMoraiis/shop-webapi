@@ -12,8 +12,8 @@ namespace Backoffice.Controllers
         [Route("")]
         public async Task<ActionResult<dynamic>> Get([FromServices] DataContext context)
         {
-            var employee = new User { Id = 1, Username = "Doug", Password = "123", Role = "employee" };
-            var manager = new User { Id = 2, Username = "Jan", Password = "123", Role = "manager" };
+            var employee = new User { Username = "Doug", Password = "123", Role = "employee" };
+            var manager = new User { Username = "Jan", Password = "123", Role = "manager" };
             var category = new Category { Id = 1, Title = "Comida"};
             var product = new Product { Id = 1, Title = "Feijao", Price = 200, Description = "É bom demais", Category = category};
             context.Users.Add(employee);
