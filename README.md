@@ -52,5 +52,5 @@ Oi 👋, me chamo **Douglas**. Se precisar de algo, pode entrar em contato! 👇
 Este projeto esta sobe a licença MIT. </br>
 Veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
 
-<p align="center">Feito com 💚 por <a href="https://www.linkedin.com/in/douglasmorais">Douglas Morais</a>.</p> 
+<p align="center">Feito com 💙 por <a href="https://www.linkedin.com/in/douglasmorais">Douglas Morais</a>.</p> 
 
